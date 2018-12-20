@@ -18,5 +18,9 @@ public class Fragment2 extends A_Fragment {
             , @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_fragment1, container, false);
     }
-    
+
+    @Override
+    public String getTittle() {
+        return "Fragment 2";
+    }
 }
