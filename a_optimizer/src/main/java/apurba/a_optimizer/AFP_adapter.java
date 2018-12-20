@@ -17,13 +17,7 @@ public class AFP_adapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-
-        for (int currentPosition: mFragmentMap.keySet()){
-            if (currentPosition == position){
-                return mFragmentMap.get(currentPosition).getFragment();
-            }
-        }
-        return null;
+        return mFragmentMap.get(position).getFragment();
     }
 
     @Override
