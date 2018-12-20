@@ -1,5 +1,6 @@
 package apurba.a_optimizer;
 
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -23,5 +24,11 @@ public class AFP_adapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         return mFragmentMap.size()-1;
+    }
+
+    @Nullable
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return mFragmentMap.get(position).getTittle();
     }
 }
