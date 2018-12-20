@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import apurba.a_optimizer.A_Fragment;
+
 public class Fragment1 extends A_Fragment {
 
     public Fragment1() {

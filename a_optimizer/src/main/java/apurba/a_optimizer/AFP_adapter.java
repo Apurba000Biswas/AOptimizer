@@ -29,6 +29,11 @@ public class AFP_adapter extends FragmentPagerAdapter {
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
-        return mFragmentMap.get(position).getTittle();
+        String tittle = mFragmentMap.get(position).getTittle();
+        if (tittle != null){
+            return tittle;
+        }else{
+            return "No Tittle";
+        }
     }
 }
