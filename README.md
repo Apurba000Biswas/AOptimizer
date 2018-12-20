@@ -12,7 +12,7 @@ Add Dependencies
 
 Add Following line in your "bulid.gradle(Projetc: xxxx)" in "allprojects" block
 
-maven { url 'https://jitpack.io' }
+"maven { url 'https://jitpack.io' }"
 
 Ex:
 
@@ -26,7 +26,7 @@ allprojects {
 
 Add Following line in your "build.gradle(Module: app)" in "dependencies" block
 
-implementation 'com.github.Apurba000Biswas:AOptimizer:1.0.0'
+"implementation 'com.github.Apurba000Biswas:AOptimizer:1.0.0'"
 
 Note: please check recent release version to get update
 
@@ -72,7 +72,7 @@ public class FamilyMemberModel implements DataItem {
     }
 }
 
-##### Step 2:
+##### Step 3:
 Set adapter with RecyclerView
 
 Create an "AR_adapter" adapter object. Which take four parameter
@@ -84,8 +84,8 @@ AR_adapter adapter = new AR_adapter(List<DataItem> data
 
 Parameters:
 1. "List<DataItem>" - This data gets binded in the recycler view.
-2. "Layout resource id" - Single data binded through this layout.
-3. "Map<Integer, Integer>" - This Map indicate which view contain the which field value
+2. "Layout resource id" - Single data gets binded through this layout.
+3. "Map<Integer, Integer>" - This Map indicate which view should contain the which field value
 4. "RecyclerAdapterOnclickListener()" - This object hold the click events(Its an Interface).
 	if you dont want to listen click event just pass "null" in this argument.
 
