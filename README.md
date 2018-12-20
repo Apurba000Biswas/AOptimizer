@@ -16,13 +16,13 @@ Add Following line in your "bulid.gradle(Projetc: xxxx)" in "allprojects" block
 
 Ex:
 
-allprojects {
-    repositories {
-        google()
-        jcenter()
-        maven { url 'https://jitpack.io' }
-    }
-}
+	allprojects {
+    	repositories {
+        	google()
+        	jcenter()
+        	maven { url 'https://jitpack.io' }
+    	}
+	}
 
 Add Following line in your "build.gradle(Module: app)" in "dependencies" block
 
@@ -35,42 +35,44 @@ Implement an Interface that serve as general Data model("DataItem")
 
 Ex:-
 
-public class FamilyMemberModel implements DataItem {
-	private String mFirstName;
-	private String mLastName;
-	private int mAge;
 
-	public FamilyMemberModel(String fistName, String lasteName, int age){
-		mFirstName = fistName;
-		mLastName = lasteName;
-		mAge = age;
+	public class FamilyMemberModel implements DataItem {
+
+		private String mFirstName;
+		private String mLastName;
+		private int mAge;
+
+		public FamilyMemberModel(String fistName, String lasteName, int age){
+			mFirstName = fistName;
+			mLastName = lasteName;
+			mAge = age;
+		}
+
+		// This method switch the getters
+		@Override
+    	public String switchGetters(int switchGetter) {
+        	switch (swichGetter){
+            	case 1:
+                	return getFirstName();
+            	case 2:
+                	return getLastName();
+            	case 3:
+                	return "" + getAge();
+            	default:
+                	return "Invalid Choice";
+        	}
+    }
+
+    	public String getFirstName(){
+        	return mFirstName;
+    	}
+    	public String getLastName(){
+        	return mLastName;
+    	}
+    	public int getAge(){
+        	return mAge;
+    	}
 	}
-
-	// This method switch the getters
-	@Override
-    public String switchGetters(int switchGetter) {
-        switch (swichGetter){
-            case 1:
-                return getFirstName();
-            case 2:
-                return getLastName();
-            case 3:
-                return "" + getAge();
-            default:
-                return "Invalid Choice";
-        }
-    }
-
-    public String getFirstName(){
-        return mFirstName;
-    }
-    public String getLastName(){
-        return mLastName;
-    }
-    public int getAge(){
-        return mAge;
-    }
-}
 
 #### Step 3:
 Set adapter with RecyclerView
