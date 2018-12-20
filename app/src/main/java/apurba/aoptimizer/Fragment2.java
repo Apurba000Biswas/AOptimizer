@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class Fragment2 extends Fragment {
+public class Fragment2 extends A_Fragment {
 
     @Nullable
     @Override
@@ -16,5 +16,9 @@ public class Fragment2 extends Fragment {
             , @Nullable ViewGroup container
             , @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_fragment1, container, false);
+    }
+
+    public String getTittle(){
+        return "Fragment 2";
     }
 }

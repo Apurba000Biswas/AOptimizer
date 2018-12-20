@@ -9,16 +9,16 @@ import java.util.Map;
 
 public class AFP_adapter extends FragmentPagerAdapter {
 
-    private Map<Integer, FragmentHolder> mFragmentMap;
+    private Map<Integer, A_Fragment> mFragmentMap;
 
-    public AFP_adapter(FragmentManager fm, Map<Integer, FragmentHolder> fragmentMap) {
+    public AFP_adapter(FragmentManager fm, Map<Integer, A_Fragment> fragmentMap) {
         super(fm);
         mFragmentMap = fragmentMap;
     }
 
     @Override
     public Fragment getItem(int position) {
-        return mFragmentMap.get(position).getFragment();
+        return mFragmentMap.get(position);
     }
 
     @Override
