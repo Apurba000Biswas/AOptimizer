@@ -23,7 +23,7 @@ public class AFP_adapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return mFragmentMap.size()-1;
+        return mFragmentMap.size();
     }
 
     @Nullable
