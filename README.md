@@ -7,7 +7,7 @@ Its a simple andorid library. Helps to manage clean code.
 In the initial version added a General Recycler Adapter 
 USING Recycler Adapter:
 
-Step 1:
+##### Step 1:
 Add Dependencies
 
 Add Following line in your "bulid.gradle(Projetc: xxxx)" in "allprojects" block
@@ -29,7 +29,7 @@ implementation 'com.github.Apurba000Biswas:AOptimizer:1.0.0'
 
 Note: please check recent release version to get update
 
-Step 2:
+##### Step 2:
 Implement an Interface that serve as general Data model("DataItem")
 
 Ex:-
