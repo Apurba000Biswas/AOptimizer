@@ -4,8 +4,7 @@ Its a simple andorid library. Helps to manage clean code.
 
 ## Using
 
-In the initial version added a General Recycler Adapter 
-USING Recycler Adapter:
+In the initial version added a General Recycler Adapter
 
 #### Step 1:
 Add Dependencies
