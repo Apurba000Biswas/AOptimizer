@@ -10,16 +10,24 @@ import java.util.Map;
 public class AFP_adapter extends FragmentPagerAdapter {
 
     private Map<Integer, A_Fragment> mFragmentMap;
+    TabChangeListener tabChangeListener;
 
-    public AFP_adapter(FragmentManager fm, Map<Integer, A_Fragment> fragmentMap) {
+    public AFP_adapter(FragmentManager fm, Map<Integer
+            , A_Fragment> fragmentMap
+            , TabChangeListener tabChangeListener) {
         super(fm);
         mFragmentMap = fragmentMap;
+        this.tabChangeListener = tabChangeListener;
     }
 
     @Override
     public Fragment getItem(int position) {
+        if (tabChangeListener != null){
+            tabChangeListener.getCurrentPageTitle(mFragmentMap.get(position).getTittle());
+        }
         return mFragmentMap.get(position);
     }
+
 
     @Override
     public int getCount() {
